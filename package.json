@@ -35,6 +35,7 @@
     "clean:build": "if [ -d build ]; then rm -rf build; fi",
     "prebuild": "npm run clean:build; mkdir -p build && npm run favicon",
     "build": "NODE_ENV=production webpack",
+	"prepare": "npm run compile && npm run compile:es",
     "deploy": "/bin/bash scripts/deploy.sh"
   },
   "repository": {
@@ -61,7 +62,7 @@
     "@babel/core": "^7.10.2",
     "@babel/plugin-transform-flow-strip-types": "^7.10.2",
     "@babel/polyfill": "^7.10.1",
-    "@babel/preset-react": "^7.10.1",
+    "@babel/preset-react": "^7.16.0",
     "babel-core": "^7.0.0-0",
     "babel-eslint": "^8.2.3",
     "babel-jest": "^22.4.4",
